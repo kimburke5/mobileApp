@@ -25,10 +25,9 @@
                 <ColumnDefinition Width="100*"/>
 
             </Grid.ColumnDefinitions>
-
-            <!--mp3 sound for button click <MediaElement x:Name="clickerControl" Grid.RowSpan="2"/>-->
+            <!--mp3 sound for button click -->
+            <MediaElement x:Name="clickerControl" Grid.RowSpan="2"/>
             
-
             <Grid Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="2">
                 <!--Textbox to show calculation result-->
                 <TextBox HorizontalAlignment="Center" VerticalAlignment="Top" Height="110" Width="440" Name="calcBox" Text="" />

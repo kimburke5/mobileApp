@@ -32,71 +32,92 @@ namespace projectApp
         bool plusButtonClick = false, minusButtonClick = false, multiplyButtonClick = false, divideButtonClick = false;
 
         //button methods generated
-        //button number 1
+        //button for number 1
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
+            clickerControl.Source = new Uri("ms-appx:///Assets/click.mp3");
+            clickerControl.Play();
 
             calcBox.Text = calcBox.Text + "1";
         }
-        //button number 2
+        //button for number 2
         private void Button2_Click(object sender, RoutedEventArgs e)
-        { 
-           
+        {
+            clickerControl.Source = new Uri("ms-appx:///Assets/click.mp3");
+            clickerControl.Play();
+
             calcBox.Text = calcBox.Text + "2";
         }
-        //button number 3
+        //button for number 3
         private void Button3_Click(object sender, RoutedEventArgs e)
         {
-           
+            clickerControl.Source = new Uri("ms-appx:///Assets/click.mp3");
+            clickerControl.Play();
 
             calcBox.Text = calcBox.Text + "3";
         }
-        //button number 4
+        //button for number 4
         private void Button4_Click(object sender, RoutedEventArgs e)
         {
-            
+            clickerControl.Source = new Uri("ms-appx:///Assets/click.mp3");
+            clickerControl.Play();
 
             calcBox.Text = calcBox.Text + "4";
         }
-        //button number 5
+        //button for number 5
         private void Button5_Click(object sender, RoutedEventArgs e)
         {
-           
+            clickerControl.Source = new Uri("ms-appx:///Assets/click.mp3");
+            clickerControl.Play();
 
             calcBox.Text = calcBox.Text + "5";
         }
-        //button number 6
+        //button for number 6
         private void Button6_Click(object sender, RoutedEventArgs e)
         {
-           
+            clickerControl.Source = new Uri("ms-appx:///Assets/click.mp3");
+            clickerControl.Play();
+
             calcBox.Text = calcBox.Text + "6";
         }
         //button for number 7
         private void Button7_Click(object sender, RoutedEventArgs e)
         {
-            
+            clickerControl.Source = new Uri("ms-appx:///Assets/click.mp3");
+            clickerControl.Play();
+
             calcBox.Text = calcBox.Text + "7";
         }
         //button for number 8
         private void Button8_Click(object sender, RoutedEventArgs e)
         {
-             calcBox.Text = calcBox.Text + "8";
+            clickerControl.Source = new Uri("ms-appx:///Assets/click.mp3");
+            clickerControl.Play();
+
+            calcBox.Text = calcBox.Text + "8";
         }
         //button for number 9
         private void Button9_Click(object sender, RoutedEventArgs e)
         {
+            clickerControl.Source = new Uri("ms-appx:///Assets/click.mp3");
+            clickerControl.Play();
+
             calcBox.Text = calcBox.Text + "9";
         }
         //button for number 0
         private void Button0_Click(object sender, RoutedEventArgs e)
         {
-           
+            clickerControl.Source = new Uri("ms-appx:///Assets/click.mp3");
+            clickerControl.Play();
+
             calcBox.Text = calcBox.Text + "0";
         }
         // + button
         private void ButtonPlus_Click(object sender, RoutedEventArgs e)
         {
-           
+            clickerControl.Source = new Uri("ms-appx:///Assets/click.mp3");
+            clickerControl.Play();
+
             calc1 = calc1 += double.Parse(calcBox.Text);
             calcBox.Text = "";
 
@@ -109,6 +130,9 @@ namespace projectApp
         // - button
         private void ButtonMinus_Click(object sender, RoutedEventArgs e)
         {
+            clickerControl.Source = new Uri("ms-appx:///Assets/click.mp3");
+            clickerControl.Play();
+
             calc1 = calc1 + double.Parse(calcBox.Text);
             calcBox.Text = "";
 
@@ -120,6 +144,9 @@ namespace projectApp
         // x button
         private void ButtonMultiply_Click(object sender, RoutedEventArgs e)
         {
+            clickerControl.Source = new Uri("ms-appx:///Assets/click.mp3");
+            clickerControl.Play();
+
             calc1 = calc1 + double.Parse(calcBox.Text);
             calcBox.Text = "";
 
@@ -127,12 +154,14 @@ namespace projectApp
             minusButtonClick = false;
             multiplyButtonClick = true;
             divideButtonClick = false;
-            
+
         }
         // / button
         private void ButtonDivide_Click(object sender, RoutedEventArgs e)
         {
-           
+            clickerControl.Source = new Uri("ms-appx:///Assets/click.mp3");
+            clickerControl.Play();
+
             calc1 = calc1 + double.Parse(calcBox.Text);
             calcBox.Text = "";
 
@@ -145,7 +174,9 @@ namespace projectApp
         //calculations of the operands
         private void ButtonEquals_Click(object sender, RoutedEventArgs e)
         {
-            
+            clickerControl.Source = new Uri("ms-appx:///Assets/click.mp3");
+            clickerControl.Play();
+
             if (plusButtonClick == true)
             {
                 calc2 = calc1 + double.Parse(calcBox.Text);
@@ -170,17 +201,22 @@ namespace projectApp
                 calcBox.Text = calc2.ToString();
                 calc1 = 0;
             }
-        
+
         }
 
         // . decimal point button
         private void ButtonDecimal_Click(object sender, RoutedEventArgs e)
         {
+            clickerControl.Source = new Uri("ms-appx:///Assets/click.mp3");
+            clickerControl.Play();
+
             calcBox.Text += ".";
         }
         // clear button
         private void ButtonClear_Click(object sender, RoutedEventArgs e)
         {
+            clickerControl.Source = new Uri("ms-appx:///Assets/click.mp3");
+            clickerControl.Play();
 
             calcBox.Text = "";
         }
@@ -188,4 +224,5 @@ namespace projectApp
 
     }
 }
+
 

@@ -8,33 +8,102 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        
-        <Grid x:Name="Calculator" Grid.Row="1" Margin="12,0,12,0">
-            <!--Buttons for the numbers in the calculator-->
-            <!--ALLIGNMENT NEEDS TO BE FIXED-->
-            <Button Content="1" Height="110" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="526,667,0,0" Name="button1" Width="110" Background="#9999ff" FontSize="50" Click="Button1_Click" />
-            <Button Content="2" Height="110" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="656,659,710,0" Name="button2" Width="110" Background="#9999ff" FontSize="50" Click="Button2_Click" />
-            <Button Content="3" Height="110" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="769,653,0,0" Name="button3" Width="110" Background="#9999ff" FontSize="50" Click="Button3_Click" />
-            <Button Content="4" Height="110" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="514,552,0,338" Name="button4" Width="110" Background="#9999ff" FontSize="50" Click="Button4_Click" />
-            <Button Content="5" Height="110" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="653,545,713,345" Name="button5" Width="110" Background="#9999ff" FontSize="50" Click="Button5_Click" />
-            <Button Content="6" Height="110" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,538,602,352" Name="button6" Width="110" Background="#9999ff" FontSize="50" Click="Button6_Click" />
-            <Button Content="7" Height="112" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="520,195,0,0" Name="button7" Width="110" Background="#9999ff" FontSize="50" Click="Button7_Click" />
-            <Button Content="8" Height="110" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="635,194,731,0" Name="button8" Width="110" Background="#9999ff" FontSize="50" Click="Button8_Click" />
-            <Button Content="9" Height="110" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,434,604,0" Name="button9" Width="110" Background="#9999ff" FontSize="50" Click="Button9_Click" />
-            <Button Content="0" Height="111" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="652,779,713,0" Name="button0" Width="111" Background="#9999ff" FontSize="50" Click="Button0_Click" />
+
+        <Grid Background="Transparent" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="100*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <!--mp3 sound for button click <MediaElement x:Name="clickerControl" Grid.RowSpan="2"/>-->
+            
+
+            <Grid Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="2">
+                <!--Textbox to show calculation result-->
+                <TextBox HorizontalAlignment="Center" VerticalAlignment="Top" Height="110" Width="440" Name="calcBox" Text="" />
+            </Grid>
+            
             <!--Buttons for the operands in the calculator-->
-            <Button Content="+" Height="110" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="879,667,0,0" Name="buttonPlus" Width="110" Background="#cc6699" FontSize="50" Click="ButtonPlus_Click" />
-            <Button Content="-" Height="110" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="873,552,0,0" Name="buttonMinus" Width="110" Background="#cc6699" FontSize="50" Padding="0,-18,0,0" Click="ButtonMinus_Click" />
-            <Button Content="x" Height="110" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="873,435,0,0" Name="buttonMultiply" Width="110" Background="#cc6699" FontSize="50" Padding="0,-18,0,0" Click="ButtonMultiply_Click" />
-            <Button Content="÷" Height="110" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="871,322,0,0" Name="buttonDivide" Width="110" Background="#cc6699" FontSize="50" Click="ButtonDivide_Click" />
-            <Button Content="%" Height="110" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="759,324,0,0" Name="buttonPercent" Width="110" Background="#cc6699" FontSize="50" Click="ButtonPercent_Click" />
-            <Button Content="=" Height="110" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="874,784,0,0" Name="buttonEquals" Width="110" Background="#ffff33" FontSize="50" Padding="0,-14,0,0" Click="ButtonEquals_Click" />
-            <Button Content="." Height="110" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="766,782,0,0" Name="buttonDecimal" Width="110" Background="#9999ff"  FontSize="50" Padding="0,-30,0,0" Click="ButtonDecimal_Click" />
-            <Button Content="C" Height="110" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="514,777,0,0" Name="buttonClear" Width="110" FontSize="50" Background="#ffff33" Click="ButtonClear_Click" />
-            <!--Textbox to show calculation result-->
-            <TextBox Height="110" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="520,0,516,0" Name="calcBox" Text="" Width="440" />
+            <Grid Grid.Row="2" Grid.Column="0">
+                <Button Content="7" Width="300" Height="90" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="button7"  Background="#9999ff" FontSize="50" Click="Button7_Click" />
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="1">
+                <Button Content="8" Width="300" Height="90" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="button8" Background="#9999ff" FontSize="50" Click="Button8_Click" />
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="2">
+                <Button Content="9" Width="300" Height="90" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="button9" Background="#9999ff" FontSize="50" Click="Button9_Click" />
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="0">
+                <Button Content="4" Width="300" Height="90" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Name="button4" Background="#9999ff" FontSize="50" Click="Button4_Click" />
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="1">
+                <Button Content="5" Width="300" Height="90" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="button5" Background="#9999ff" FontSize="50" Click="Button5_Click" />
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="2">
+                <Button Content="6" Width="300" Height="90" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="button6" Background="#9999ff" FontSize="50" Click="Button6_Click" />
+            </Grid>
+
+            <Grid Grid.Row="4" Grid.Column="0">
+                <Button Content="1" Width="300" Height="90" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="button1" Background="#9999ff" FontSize="50" Click="Button1_Click" />
+            </Grid>
+            <Grid Grid.Row="4" Grid.Column="1">
+                <Button Content="2" Width="300" Height="90" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Name="button2" Background="#9999ff" FontSize="50" Click="Button2_Click" />
+            </Grid>
+            <Grid Grid.Row="4" Grid.Column="2">
+                <Button Content="3" Width="300" Height="90" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="button3" Background="#9999ff" FontSize="50" Click="Button3_Click" />
+            </Grid>
+            <Grid Grid.Row="5" Grid.Column="1">
+                <Button Content="0" Width="300" Height="90" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="button0" Background="#9999ff" FontSize="50" Click="Button0_Click" />
+            </Grid>
+            <Grid Grid.Row="5" Grid.Column="0">
+                <Button Content="C" Width="140" Height="90" HorizontalAlignment="Left" VerticalAlignment="Stretch" Name="buttonClear" FontSize="50" Background="#ffff33" Click="ButtonClear_Click" Margin="30,6,0,1" />
+            </Grid>
+
+            <Grid Grid.Row="5" Grid.Column="0">
+                <Button Content="." Width="140" Height="90" HorizontalAlignment="Right" VerticalAlignment="Stretch" Name="buttonDecimal" Background="#9999ff"  FontSize="50" Padding="0,-30,0,0" Click="ButtonDecimal_Click" Margin="10,6,32,1" />
+            </Grid>
+            
+            <Grid Grid.Row="5" Grid.Column="2">
+                <Button Content="=" Width="300" Height="90" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="buttonEquals" Background="#ffff33" FontSize="50" Padding="0,-14,0,0" Click="ButtonEquals_Click" Grid.Column="2" Grid.Row="1" />
+            </Grid>
+            
+            <Grid Grid.Row="5" Grid.Column="3">
+                <Button Content="+" Width="300" Height="90" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="buttonPlus" Background="#cc6699" FontSize="50" Click="ButtonPlus_Click" Grid.Column="2" Grid.Row="1" />
+            </Grid>
+            
+            <Grid Grid.Row="4" Grid.Column="3">
+                <Button Content="-" Width="300" Height="90" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="buttonMinus" Background="#cc6699" FontSize="50" Padding="0,-18,0,0" Click="ButtonMinus_Click" Grid.Column="2" Grid.Row="1" />
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="3">
+                <Button Content="x" Width="300" Height="90" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="buttonMultiply" Background="#cc6699" FontSize="50" Padding="0,-18,0,0" Click="ButtonMultiply_Click" Grid.Column="2" Grid.Row="1" />
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="3">
+                <Button Content="÷" Width="300" Height="90" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="buttonDivide" Background="#cc6699" FontSize="50" Click="ButtonDivide_Click" Grid.Column="2" Grid.Row="1" />
+            </Grid>
+           
+
+
+           
+
+
+           
+            
 
         </Grid>
     </Grid>
-    
 </Page>

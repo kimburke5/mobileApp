@@ -13,11 +13,16 @@ The app is a well-designed UI that is fit for purpose and provides a good user e
 5. Change the current working directory to the location where you want the cloned directory to be made.
 6. Type git clone, and then paste the URL you copied in Step 2.
 7. Press Enter. Your local clone will now be created.
+
 When the repository has been cloned to your local machine, you will need to open it using visual studio 2017 to launch the application.
 
 # References
 http://soundbible.com/suggest.php?q=click&x=17&y=11
+
 https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons
+
 https://icons8.com/icon/set/calculator/all
+
 http://www.wpf-tutorial.com/panels/grid-rows-and-columns/
+
 https://www.c-sharpcorner.com/article/create-basic-calculator-using-windows-forms-and-c-sharp/

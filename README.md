@@ -1,5 +1,6 @@
 # Mobile Application Development Project
 This is a project for the module Mobile Application Development as a part of third year Software Development in GMIT. 
+Current Status: waiting for app certification from windows development center
 
 # Design
 I created the project using visual studio 2017, it is a Universal Windows Project, programmed through C# and xaml. The application I created was a single page calculator app with the ability to add, subtract, multiply and divide with whole or decimal point numbers.
